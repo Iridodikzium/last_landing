@@ -1,0 +1,49 @@
+ <div id="footer-info" class="inner">
+      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+      <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+
+      <% if (theme.sidebar === 'bottom'){ %>
+        <%- partial('_partial/sidebar') %>
+      <% } %>
+// links after footer
+      <nav id="mobile-nav">
+        <% for (var i in theme.menu){ %>
+          <a href="<%- url_for(theme.menu[i]) %>" class="mobile-nav-link"><%= i %></a>
+        <% } %>
+      </nav>
+
+       <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">Вторая колонка</div>
+              <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">Третья колонка</div>
+              <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">Четвёртая колонка</div>
+              <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">Пятая колонка</div>
+              <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">Шестая колонка</div>
+              <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">Седьмая колонка</div>
+              <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">Восьмая ая колонка</div>
+              <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">Девятая колонка</div>
+              <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">Десятая колонка</div>
+
+
+              .first-line-container {
+               // font-family: RobotoRegular;
+                color: #757575;
+                font-size: 14px;/* Approximation due to font substitution */
+                font-weight: 300;
+                text-align: left;
+              }
+
+/opt/src/landing/themes/landscape/source/css/style.styl
+
+twitter facebook linkedin angellist
+
+"font-awesome": "fontawesome#^4.5.0"//в bower.json
+//в layout partial head.js
+<%- css('/vendors/font-awesome/css/font-awesome.min') %>
+ <%- js('/vendors/jquery/dist/jquery.min') %>
+ <%- js('/vendors/bootstrap/dist/js/bootstrap.min') %>
+
+ <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                </div>
+                <div class="col-md-1" >
+                  <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                </div>

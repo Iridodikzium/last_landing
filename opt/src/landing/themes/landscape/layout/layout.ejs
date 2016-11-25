@@ -1,0 +1,16 @@
+<%- partial('_partial/head') %>
+<body>
+<%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+<!--BODY-->
+<% var c_page = page.path.replace('index.html', '') %>
+<%- partial('_pages/' + c_page + 'index.ejs', {post: page}) %>
+
+<% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+  <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+<% } %>
+
+<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+<%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
+<%- partial('_partial/after-footer') %>
+</body>
+</html>
